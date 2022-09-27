@@ -51,9 +51,8 @@ def preprocessamento(y):
     contornos, hier = cv2.findContours(bordas, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
     cont = cv2.drawContours(imagem.copy(), contornos, -1, (0, 255, 0), 2)
 
-    detctar(contornos)
-    mostrarimgs()
-
-
+    
 for a in range(0, 17):
     preprocessamento(str(a))
+    detctar(contornos)
+    mostrarimgs()
